@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri Karya Ferdiawan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 50;
+        }
+
+        #modal-img {
+            transition: transform 0.2s ease-in-out;
+            cursor: zoom-in;
+        }
+    </style>
+</head>
+
+<body class="bg-cover bg-center bg-no-repeat text-gray-800" style="background-image: url('gra home.jpeg');">
+
+    <!-- HEADER -->
+    <header class="bg-black bg-opacity-60 text-center py-6 shadow-md">
+        <h1 class="text-4xl font-extrabold bg-clip-text text-transparent 
+               bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600">
+            Ferdiawan's ART GALLERY
+        </h1>
+        <p class="text-sm mt-2 text-white">WELCOME IN MY GALLERY, YOU CAN REQUEST</p>
+    </header>
+
+    <!-- GALERI GAMBAR -->
+    <main class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <!-- KARTU GAMBAR -->
+        <!-- Ganti gambar dan judul sesuai kebutuhan -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="gambar kedung 1.jpg" alt="Karya 1" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('gambar kedung 1.jpg', 'Karya Judul 1')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 1</h2>
+                <button onclick="bukaDetail('gambar kedung 1.jpg', 'Karya Judul 1')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
+                    Lihat Detail
+                </button>
+            </div>
+        </div>
+
+        <!-- Karya 2 - 11 (tidak diubah, tetap lengkap sesuai permintaan) -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="gambar kedung2.jpeg" alt="Karya 2" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('gambar kedung2.jpeg', 'Karya Judul 2')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 2</h2>
+                <button onclick="bukaDetail('gambar kedung2.jpeg', 'Karya Judul 2')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">Lihat Detail</button>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="gambar kedung 3.jpg" alt="Karya 3" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('gambar kedung 3.jpg', 'Karya Judul 3')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 3</h2>
+                <button onclick="bukaDetail('gambar kedung 3.jpg', 'Karya Judul 3')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">Lihat Detail</button>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="gambar kedung 4.jpeg" alt="Karya 2" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('gambar kedung 4.jpeg', 'Karya Judul 2')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 4</h2>
+                <button onclick="bukaDetail('gambar kedung 4.jpeg', 'Karya Judul 2')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
+                    Lihat Detail
+                </button>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="5.jpeg" alt="Karya 2" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('5.jpeg', 'Karya Judul 2')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 5</h2>
+                <button onclick="bukaDetail('5.jpeg', 'Karya Judul 2')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
+                    Lihat Detail
+                </button>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="6.jpeg" alt="Karya 2" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('6.jpeg', 'Karya Judul 2')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 6</h2>
+                <button onclick="bukaDetail('6.jpeg', 'Karya Judul 2')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
+                    Lihat Detail
+                </button>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="7.jpeg" alt="Karya 2" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('7.jpeg', 'Karya Judul 2')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 7</h2>
+                <button onclick="bukaDetail('7.jpeg', 'Karya Judul 2')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
+                    Lihat Detail
+                </button>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="8.jpeg" alt="Karya 2" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('8.jpeg', 'Karya Judul 2')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 8</h2>
+                <button onclick="bukaDetail('8.jpeg', 'Karya Judul 2')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
+                    Lihat Detail
+                </button>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="9.jpeg" alt="Karya 2" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('9.jpeg', 'Karya Judul 2')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 9</h2>
+                <button onclick="bukaDetail('9.jpeg', 'Karya Judul 2')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
+                    Lihat Detail
+                </button>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="10.jpeg" alt="Karya 2" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('10.jpeg', 'Karya Judul 2')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 10</h2>
+                <button onclick="bukaDetail('10.jpeg', 'Karya Judul 10')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
+                    Lihat Detail
+                </button>
+            </div>
+        </div>
+
+        <!-- Tambahkan semua karya lainnya seperti Karya 4–11 (tidak diringkas di sini untuk menghemat ruang, tapi semua tetap utuh dari kode kamu) -->
+
+        <!-- ...Lanjutan karya 4 sampai 11 (tidak dihapus) -->
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="11.jpeg" alt="Karya 11" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('11.jpeg', 'Karya Judul 11')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 11</h2>
+                <button onclick="bukaDetail('11.jpeg', 'Karya Judul 11')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">Lihat Detail</button>
+            </div>
+        </div>
+           <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="instagram_DMU_x0MyT4V.jpg" alt="Karya 12" class="w-full h-64 object-contain bg-white cursor-pointer"
+                onclick="bukaDetail('instagram_DMU_x0MyT4V.jpg', 'Karya Judul 12')">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">Karya 12</h2>
+                <button onclick="bukaDetail('instagram_DMU_x0MyT4V.jpg', 'Karya Judul 12')"
+                    class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">Lihat Detail</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- TOMBOL INSTAGRAM (GANTI WHATSAPP) -->
+    <div class="floating-button">
+        <button onclick="bukaInstagram()"
+            class="bg-pink-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-pink-600">
+            Hubungi via Instagram
+        </button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 text-sm text-white bg-black bg-opacity-50">
+        &copy; 2025 FERDIAWAN'S Art Gallery. Powered by Passion.
+    </footer>
+
+    <!-- MODAL GAMBAR FULLSCREEN -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+        <span onclick="tutupDetail()" class="absolute top-4 right-6 text-white text-4xl font-bold cursor-pointer">
+            &times;
+        </span>
+        <img id="modal-img" src="" alt="Detail Gambar" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        let karyaDipilih = "";
+        let scale = 1;
+
+        function bukaDetail(gambarSrc, judul) {
+            document.getElementById("modal-img").src = gambarSrc;
+            document.getElementById("modal").classList.remove("hidden");
+            karyaDipilih = judul;
+            scale = 1;
+            setZoom();
+        }
+
+        function tutupDetail() {
+            document.getElementById("modal").classList.add("hidden");
+            document.getElementById("modal-img").src = "";
+        }
+
+        function setZoom() {
+            const img = document.getElementById("modal-img");
+            img.style.transform = `scale(${scale})`;
+        }
+
+        document.addEventListener("wheel", function (e) {
+            const modal = document.getElementById("modal");
+            if (!modal.classList.contains("hidden")) {
+                e.preventDefault();
+                if (e.deltaY < 0) {
+                    scale += 0.1;
+                } else {
+                    scale = Math.max(0.5, scale - 0.1);
+                }
+                setZoom();
+            }
+        }, {
+            passive: false
+        });
+
+        window.addEventListener("click", function (e) {
+            const modal = document.getElementById("modal");
+            if (e.target === modal) {
+                tutupDetail();
+            }
+        });
+
+        function bukaInstagram() {
+            if (karyaDipilih === "") {
+                alert("Klik 'Lihat Detail' pada salah satu karya dulu sebelum menghubungi.");
+                return;
+            }
+            const usernameIG = "ferdi_s0w"; 
+            const pesan = `Halo! Saya tertarik dengan karya "${karyaDipilih}" yang ada di galeri kamu.`;
+            const url = `https://www.instagram.com/${usernameIG}/`;
+
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+
+</html>
